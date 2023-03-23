@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "texttaker"
+version = "1.0.0"
+description = "Extract text from PDF using more than one process to reduce time processing. Write the data extracted in a .docx MS Office file."
+authors = ["ivanSantos16 <ivan.rafa.16@gmail.com>"]
+maintainers = ["ivanSantos16 <ivan.rafa.16@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/ivanSantos16/texttaker"
+repository = "https://github.com/ivanSantos16/texttaker"
+keywords = ["multiprocess", "PDF", "extract"]
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+packages = [{ include = "texttaker" }]
+include = ["README.md", "LICENSE", "logo.png"]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+markdown = ">=3.3.4"
+json = ">=2.0.9"
+python-docx = ">=0.8.10"
+
+[tool.poetry.scripts]
+texttaker = 'texttaker.__main__:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
