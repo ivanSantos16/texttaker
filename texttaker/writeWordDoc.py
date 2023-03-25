@@ -19,7 +19,7 @@ def writeWordDoc(json_file: str, msdocpath: str):
         doc.add_paragraph(data[pdf_name]["text"])
         if not os.path.exists(msdocpath):
             os.makedirs(msdocpath)
-        doc.save(msdocpath + pdf_name.split('.')[0] + '.docx')
+        doc.save(msdocpath + '/' + pdf_name.split('.')[0] + '.docx')
 
 
 # writeWordDoc(json_file = './data/text_extracted.json')
